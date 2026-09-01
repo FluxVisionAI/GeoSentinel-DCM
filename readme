@@ -1,57 +1,203 @@
-🫀 GeoSentinel-DCM
-A Geometric Deep Learning and Multimodal Multiscale Digital Twin Framework for Precision Risk Stratification in Dilated Cardiomyopathy
-Python 3.10+PyTorch Geometric 
-License: MIT
- 
-Status: Code & Manuscript Ready
- 
-Platform: Linux / Windows
+# 🫀 GeoSentinel-DCM
+
+**A Geometric Deep Learning and Multimodal Multiscale Digital Twin Framework for Precision Risk Stratification in Dilated Cardiomyopathy**
+
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-Geometric-red.svg)](https://pytorch.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Code%20%26%20Manuscript%20Ready-orange.svg)]()
+
+**Platform:** Linux / Windows
+
+---
+
+## 📖 Overview
+
+**GeoSentinel-DCM** is an end-to-end geometric deep learning and digital twin framework for **clinical risk stratification and survival prognosis in Dilated Cardiomyopathy (DCM)**.
+
+The framework integrates multimodal cardiac information within a unified computational pipeline, enabling patient-specific representation learning and prognostic prediction.
+
+The current implementation includes:
+
+* 🧬 **Geometric Deep Learning**
+* 🫀 **Cardiac Digital Twin Modeling**
+* 🧩 **Multimodal and Multiscale Feature Integration**
+* 📊 **Clinical Risk Stratification**
+* ⏱️ **Survival Prognosis**
+* 🔗 **SAR Fusion Engine**
+
+---
+
+## 🏗️ Framework
+
+GeoSentinel-DCM is designed as a multi-tier computational framework that combines cardiac geometry, imaging-derived representations, and clinical information for patient-specific prognostic modeling.
 
 
-📖 Overview
-GeoSentinel-DCM is an end-to-end, multi-tier geometric deep learning and digital twin framework designed for clinical risk stratification and survival prognosis in Dilated Cardiomyopathy (DCM).
+---
 
-🚀 Installation & Quickstart
-1. Clone Repository & Setup Environment
-bash
+## 🚀 Installation
 
-# Clone the repository
-git clone https://github.com/YourUsername/GeoSentinel-DCM.git
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/FluxVisionAI/GeoSentinel-DCM.git
 cd GeoSentinel-DCM
-# Create Conda Environment
+```
+
+### 2. Create the Conda environment
+
+```bash
 conda create -n geosentinel python=3.10 -y
 conda activate geosentinel
-# Install PyTorch & PyTorch Geometric (adjust CUDA version as needed)
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
-pip install torch-geometric torch-scatter torch-sparse -f https://data.pyg.org/whl/torch-2.1.0+cu118.html
-# Install Clinical Survival & Image Processing Packages
-pip install lifelines scikit-survival nibabel pyvista trimesh shap scikit-learn pandas numpy matplotlib
-2. End-to-End Inference & Risk Prediction
-To run the complete 4-Pillar inference and SAR Fusion Engine on patient data:
+```
 
-bash
+### 3. Install PyTorch
 
-# Execute SAR Fusion Pipeline
+The following example uses CUDA 11.8:
+
+```bash
+pip install torch torchvision \
+    --index-url https://download.pytorch.org/whl/cu118
+```
+
+Please adjust the PyTorch/CUDA version according to your GPU environment.
+
+### 4. Install PyTorch Geometric
+
+```bash
+pip install torch-geometric
+```
+
+Additional PyG dependencies should be installed according to the installed PyTorch and CUDA versions.
+
+### 5. Install scientific and clinical analysis packages
+
+```bash
+pip install \
+    lifelines \
+    scikit-survival \
+    nibabel \
+    pyvista \
+    trimesh \
+    shap \
+    scikit-learn \
+    pandas \
+    numpy \
+    matplotlib
+```
+
+---
+
+## ▶️ Quick Start
+
+To run the complete prognosis inference pipeline:
+
+```bash
 python src/ml/final_submission_v26_prognosis.py \
     --input_dir Dataset/ \
     --output_dir output/ \
     --endpoint primary
+```
 
-📜 Citation
-If you use GeoSentinel-DCM in your research, please cite our manuscript:
+### Arguments
 
-bibtex
+| Argument       | Description                                     |
+| -------------- | ----------------------------------------------- |
+| `--input_dir`  | Input patient dataset directory                 |
+| `--output_dir` | Directory for generated predictions and results |
+| `--endpoint`   | Clinical endpoint used for prognosis analysis   |
 
+---
+
+## 📁 Repository Structure
+
+```text
+GeoSentinel-DCM/
+│
+├── Dataset/
+│   └── ...
+│
+├── src/
+│   ├── ml/
+│   │   └── final_submission_v26_prognosis.py
+│   └── ...
+│
+├── output/
+│   └── ...
+│
+├── README.md
+├── LICENSE
+└── requirements.txt
+```
+
+---
+
+## 🧪 Reproducibility
+
+The repository is intended to provide a reproducible computational framework for geometric deep learning and digital-twin-based prognostic modeling.
+
+For reproducibility, we recommend recording:
+
+* Python version
+* PyTorch version
+* CUDA version
+* PyTorch Geometric version
+* Dataset version
+* Model checkpoint/version
+* Random seed
+* Endpoint definition
+
+Patient-level clinical data are **not included in this repository**.
+
+---
+
+## 📊 Clinical Application
+
+GeoSentinel-DCM is developed for research into **risk stratification and survival prognosis in Dilated Cardiomyopathy**.
+
+The framework is intended to support:
+
+* Patient-specific computational modeling
+* Multimodal cardiac representation
+* Prognostic risk estimation
+* Survival analysis
+* Digital-twin-based precision cardiovascular research
+
+**This repository is intended for research purposes and is not a clinical diagnostic device.**
+
+---
+
+## 📜 Citation
+
+If you use GeoSentinel-DCM in your research, please cite:
+
+```bibtex
 @article{geosentinel_dcm_2026,
   title={GeoSentinel-DCM: A Geometric Deep Learning and Multimodal Multiscale Digital Twin Framework for Risk Stratification in Dilated Cardiomyopathy},
   author={GeoSentinel-DCM Research Consortium},
   journal={Under Review},
   year={2026}
 }
-📄 License
-This project is licensed under the MIT License - see the 
-LICENSE
- file for details.
+```
 
-🤝 Contact & Acknowledgements
-For technical queries, collaboration, or data access requests, please open an issue on GitHub or contact the corresponding authors.
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+See [LICENSE](LICENSE) for details.
+
+---
+
+## 🤝 Contact & Collaboration
+
+For technical questions, collaboration, or data access requests, please open an issue in this repository or contact the corresponding authors.
+
+---
+
+## ⚠️ Data Availability
+
+Clinical CMR and patient-level data are not publicly distributed with this repository due to data governance, privacy, and institutional requirements.
+
+Researchers interested in collaboration or external validation may contact the corresponding authors.
